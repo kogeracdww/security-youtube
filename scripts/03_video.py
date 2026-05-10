@@ -121,11 +121,14 @@ def main():
            "-i", f"{tmpdir}/f%06d.png",
            "-i", audio]
     if has_bgm:
-        cmd += ["-stream_loop", "-1", "-i", bgm_p,
-                "-filter_complex",
-                "[1:a]volume=1.0[narr];[2:a]volume=0.28[bgm_v];"
-                "[narr][bgm_v]amix=inputs=2:duration=first[aout]",
-                "-map", "0:v", "-map", "[aout]"]
+        cmd += ["-i", bgm_p]
+
+    if has_bgm:
+        af = ("[1:a]volume=1.0[narr]"
+              ";[2:a]volume=0.28[bgm_v]"
+              ";[bgm_v]aloop=loop=-1:size=2000000000[bgm_l]"
+              ";[narr][bgm_l]amix=inputs=2:duration=first[aout]")
+        cmd += ["-filter_complex", af, "-map", "0:v", "-map", "[aout]"]
     else:
         cmd += ["-map", "0:v", "-map", "1:a"]
 
