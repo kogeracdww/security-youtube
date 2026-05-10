@@ -1,0 +1,48 @@
+name: Daily Security Post (22:00 JST)
+
+on:
+  schedule:
+    - cron: '0 13 * * *'   # UTC 13:00 = JST 22:00
+  workflow_dispatch:
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    env:
+      GCP_API_KEY: ${{ secrets.GCP_API_KEY }}
+      YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+      YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+      YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+
+    steps:
+      - uses: actions/checkout@v4.2.2
+
+      - name: Setup Python
+        uses: actions/setup-python@v5.6.0
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get install -y ffmpeg fonts-dejavu
+          pip install Pillow
+
+      - name: 01 Select content
+        run: python scripts/01_select.py
+
+      - name: 02 Generate audio (TTS)
+        run: python scripts/02_audio.py
+
+      - name: 03 Render video
+        run: python scripts/03_video.py
+
+      - name: 04 Upload to YouTube
+        run: python scripts/04_upload.py
+
+      - name: Commit posted.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/posted.json
+          git diff --cached --quiet || git commit -m "✅ Posted Security No.${{ env.SECURITY_NO }}"
+          git push
