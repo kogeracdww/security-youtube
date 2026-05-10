@@ -15,6 +15,25 @@ WHITE_DIM = (255, 255, 255, 180)
 SHADOW = (0, 0, 0, 160)
 
 
+def get_bgm_samples(bgm_path: str) -> int:
+    """BGMの実際のサンプル数を取得してaloopのsizeに使う"""
+    try:
+        r = subprocess.run([
+            'ffprobe', '-v', 'quiet',
+            '-show_entries', 'stream=nb_samples,sample_rate,duration',
+            '-select_streams', 'a:0', '-of', 'json', bgm_path
+        ], capture_output=True, text=True)
+        data = json.loads(r.stdout)
+        s = data.get('streams', [{}])[0]
+        if s.get('nb_samples') and s['nb_samples'] != 'N/A':
+            return int(s['nb_samples'])
+        dur = float(s.get('duration', 30))
+        sr  = int(s.get('sample_rate', 44100))
+        return int(dur * sr)
+    except Exception:
+        return 1323000  # 30秒@44100Hzのフォールバック
+
+
 def clean(s: str) -> str:
     if not s: return ""
     s = s.replace("\\n", " ").replace("\n", " ")
@@ -124,9 +143,10 @@ def main():
         cmd += ["-i", bgm_p]
 
     if has_bgm:
+        bgm_samples = get_bgm_samples(bgm_p)
         af = ("[1:a]volume=1.0[narr]"
               ";[2:a]volume=0.28[bgm_v]"
-              ";[bgm_v]aloop=loop=-1:size=2000000000[bgm_l]"
+              f";[bgm_v]aloop=loop=-1:size={bgm_samples}[bgm_l]"
               ";[narr][bgm_l]amix=inputs=2:duration=first[aout]")
         cmd += ["-filter_complex", af, "-map", "0:v", "-map", "[aout]"]
     else:
