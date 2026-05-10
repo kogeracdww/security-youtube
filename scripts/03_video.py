@@ -9,7 +9,7 @@ from PIL import Image, ImageDraw, ImageFont
 W, H = 1080, 1920
 SAFE_TOP = 285
 FONT_PATH = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
-FS_HOOK, FS_PHRASE, FS_TITLE, FS_LOGO = 96, 48, 58, 34
+FS_HOOK, FS_PHRASE, FS_TITLE, FS_LOGO = 96, 38, 58, 34
 CAMERA_SAFE = 120   # カメラホール下端の余白
 PAD_X = 80          # 左右余白px（フック用）
 WHITE = (255, 255, 255, 255)
@@ -96,9 +96,7 @@ def render_frames(bg_path, hook, phrases, no, dur=20.0):
     # レイアウト（カメラホール考慮）
     # カメラホール下端 + フォントサイズ以上の余白
     hook_y   = CAMERA_SAFE + FS_HOOK      # 約216px〜
-    # key_phrasesはフックの下（フックが複数行になることを考慮して余裕を持たせる）
-    phrase_y = hook_y + FS_HOOK * 4       # フックの下4行分
-    # タイトル（15-19s用）
+    phrase_y = hook_y + FS_HOOK * 3       # フックの下
     title_y  = CAMERA_SAFE + FS_TITLE
     logo_y   = title_y + FS_TITLE + 20
 
@@ -107,7 +105,7 @@ def render_frames(bg_path, hook, phrases, no, dur=20.0):
             # 最初から全部表示（フック + key_phrases[0-2]）
             texts = [(hook, hook_y, FS_HOOK, False)]
             for i, p in enumerate(phrases[:3]):
-                texts.append((p, phrase_y + i * int(FS_PHRASE * 1.6), FS_PHRASE, False))
+                texts.append((p, phrase_y + i * int(FS_PHRASE * 2.2), FS_PHRASE, False))
             return texts
         elif t < 19:
             # タイトルカード
