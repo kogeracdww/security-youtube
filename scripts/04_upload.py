@@ -18,11 +18,35 @@ def get_access_token() -> str:
         return json.loads(resp.read())["access_token"]
 
 def build_metadata(no: str, hook: str, script: str, category: str) -> dict:
-    hashtags = "#cybersecurity #shorts #digitalsecurity #privacy #scam #infosec"
+    hashtags = "#cybersecurity #shorts #digitalsecurity #privacy #scam #infosec #datasecurity #onlinesafety"
+
+    # カテゴリ別絵文字
+    emoji_map = {
+        "スマホ・2026年":  "📱",
+        "AI・2026年":      "🤖",
+        "社会・2026年":    "🌐",
+        "写真・位置情報":  "📍",
+        "QRコード":        "📷",
+        "デジタル全般":    "🔒",
+        "政府・大学レポ":  "📋",
+    }
+    emoji = emoji_map.get(category, "🔐")
+
     description = (
-        f"No.{no} — Digital Security\n\n"
+        f"{emoji} No.{no} — Digital Security\n\n"
+        f"⚠️ {hook}\n\n"
         f"{script}\n\n"
-        "Stay safe in the digital world. Knowledge is your best protection.\n\n"
+        "━━━━━━━━━━━━━━━━━━━━\n"
+        "🛡️ Stay safe in the digital world.\n"
+        "Knowledge is your best protection.\n\n"
+        "📲 Protect yourself with these apps:\n\n"
+        "📍 GPS Wipe: Photo Privacy\n"
+        "https://play.google.com/store/apps/details?id=com.blocktracking.gpswipe\n\n"
+        "📷 No Location Camera - GPS Off\n"
+        "https://play.google.com/store/apps/details?id=io.kogera.noloccam\n\n"
+        "🔍 QR Reader: Safe Scan SSL Check\n"
+        "https://play.google.com/store/apps/details?id=com.kogera.qrtrapinsight\n\n"
+        "━━━━━━━━━━━━━━━━━━━━\n"
         f"{hashtags}"
     )
     return {
