@@ -36,7 +36,7 @@ def draw_centered(draw, text, y, font, color=WHITE, max_w=W-120):
         else:
             line = test
     if line: lines.append(line)
-    lh = draw.textbbox((0,0),"A",font=font)[3] + 8
+    lh = int(draw.textbbox((0,0),"A",font=font)[3] * 1.5)
     cy = y
     for l in lines:
         bbox = draw.textbbox((0,0), l, font=font)
@@ -79,7 +79,10 @@ def render_frames(bg_path, hook, phrases, no, dur=20.0):
         elif t < 15:
             i = (int(t)-3)//3
             return [(phrases[i], phrase_y, FS_PHRASE, False)] if i < len(phrases) else []
-        elif t < 19: return [(phrases[3] if len(phrases)>3 else "", title_y, FS_TITLE, False),
+        elif t < 19:
+            p4 = phrases[3] if len(phrases)>3 else ""
+            import re; p4 = re.sub(r"^No\.\d+\s*[\-—–]\s*", "", p4)
+            return [(p4, title_y, FS_TITLE, False),
                               ("Digital Security", logo_y, FS_LOGO, True)]
         else: return [(hook, hook_y, FS_HOOK, False)]
 
