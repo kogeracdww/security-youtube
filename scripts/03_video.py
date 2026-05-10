@@ -144,10 +144,10 @@ def main():
 
     if has_bgm:
         bgm_samples = get_bgm_samples(bgm_p)
-        af = ("[1:a]volume=1.0[narr]"
+        af = ("[1:a]apad=whole_dur=20[narr_pad]"  # ナレーション短くても20秒まで延長
               ";[2:a]volume=0.28[bgm_v]"
               f";[bgm_v]aloop=loop=-1:size={bgm_samples}[bgm_l]"
-              ";[narr][bgm_l]amix=inputs=2:duration=first[aout]")
+              ";[narr_pad][bgm_l]amix=inputs=2:duration=first[aout]")
         cmd += ["-filter_complex", af, "-map", "0:v", "-map", "[aout]"]
     else:
         cmd += ["-map", "0:v", "-map", "1:a"]
