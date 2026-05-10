@@ -5,7 +5,7 @@
     "category": "スマホ・2026年",
     "bgm": "bgm_tech.mp3",
     "illustration": "no001.png",
-    "schedule": "2026-05-11T19:00:00+09:00",
+    "schedule": "2026-05-10T19:00:00+09:00",
     "hook": "A peace sign photo can unlock your phone.",
     "script": "Modern cameras capture fingerprints and iris patterns in high resolution. Hackers can clone biometric data from a simple selfie posted online.",
     "key_phrases": [
@@ -21,7 +21,7 @@
     "category": "政府・大学レポ",
     "bgm": "bgm_calm.mp3",
     "illustration": "no002.png",
-    "schedule": "2026-05-12T19:00:00+09:00",
+    "schedule": "2026-05-11T19:00:00+09:00",
     "hook": "Trusting AI answers completely is now a security risk.",
     "script": "Criminal groups poison AI training data with false information. The AI confidently gives wrong answers. Always verify critical decisions with original sources.",
     "key_phrases": [
@@ -37,7 +37,7 @@
     "category": "写真・位置情報",
     "bgm": "bgm_warning.mp3",
     "illustration": "no003.png",
-    "schedule": "2026-05-13T19:00:00+09:00",
+    "schedule": "2026-05-12T19:00:00+09:00",
     "hook": "Hiding your window does not hide your location.",
     "script": "Even blurred photos contain GPS coordinates embedded in the file data. That metadata tells stalkers exactly where you are right now.",
     "key_phrases": [
@@ -53,7 +53,7 @@
     "category": "写真・位置情報",
     "bgm": "bgm_warning.mp3",
     "illustration": "no004.png",
-    "schedule": "2026-05-14T19:00:00+09:00",
+    "schedule": "2026-05-13T19:00:00+09:00",
     "hook": "Selling items online from home? Your photos reveal your address.",
     "script": "Product photos taken at home contain GPS data that shows buyers your exact location. This goes beyond your listed address.",
     "key_phrases": [
@@ -69,7 +69,7 @@
     "category": "デジタル全般",
     "bgm": "bgm_calm.mp3",
     "illustration": "no005.png",
-    "schedule": "2026-05-15T19:00:00+09:00",
+    "schedule": "2026-05-14T19:00:00+09:00",
     "hook": "Hot phone and slow apps? Something is running in the background.",
     "script": "These symptoms may indicate hidden malware sending your location or communicating with illegal servers. Clean your environment regularly.",
     "key_phrases": [
@@ -85,7 +85,7 @@
     "category": "社会・2026年",
     "bgm": "bgm_tech.mp3",
     "illustration": "no006.png",
-    "schedule": "2026-05-16T19:00:00+09:00",
+    "schedule": "2026-05-15T19:00:00+09:00",
     "hook": "Your car remembers everywhere you went and everyone you met.",
     "script": "Connected car data includes your location history routes and contacts. A hack exposes your entire daily life to criminals.",
     "key_phrases": [
@@ -101,7 +101,7 @@
     "category": "写真・位置情報",
     "bgm": "bgm_warning.mp3",
     "illustration": "no007.png",
-    "schedule": "2026-05-17T19:00:00+09:00",
+    "schedule": "2026-05-16T19:00:00+09:00",
     "hook": "Indoor photos are not safe. GPS data is still recorded.",
     "script": "The latitude and longitude of your home is embedded in every photo taken inside. Posting it online is the same as publishing your address.",
     "key_phrases": [
@@ -117,7 +117,7 @@
     "category": "AI・2026年",
     "bgm": "bgm_tech.mp3",
     "illustration": "no008.png",
-    "schedule": "2026-05-18T19:00:00+09:00",
+    "schedule": "2026-05-17T19:00:00+09:00",
     "hook": "That perfect email written just for you might be an AI scam.",
     "script": "AI analyzes your social media to craft personalized phishing emails matching your hobbies and recent activities. It feels completely real.",
     "key_phrases": [
@@ -133,7 +133,7 @@
     "category": "写真・位置情報",
     "bgm": "bgm_warning.mp3",
     "illustration": "no009.png",
-    "schedule": "2026-05-19T19:00:00+09:00",
+    "schedule": "2026-05-18T19:00:00+09:00",
     "hook": "School entrance photo? Check the GPS data before you post.",
     "script": "Hiding the school name or gate still leaves GPS coordinates in the file. Professionals can identify the school and commute route from metadata alone.",
     "key_phrases": [
@@ -149,7 +149,7 @@
     "category": "写真・位置情報",
     "bgm": "bgm_warning.mp3",
     "illustration": "no010.png",
-    "schedule": "2026-05-20T19:00:00+09:00",
+    "schedule": "2026-05-19T19:00:00+09:00",
     "hook": "Reflection in glasses is scary. Hidden metadata is scarier.",
     "script": "Even if you avoid reflections in eyes or windows the digital Exif data still records your exact coordinates. Caution about what you see is not enough.",
     "key_phrases": [
@@ -165,7 +165,7 @@
     "category": "QRコード",
     "bgm": "bgm_warning.mp3",
     "illustration": "no011.png",
-    "schedule": "2026-05-21T19:00:00+09:00",
+    "schedule": "2026-05-20T19:00:00+09:00",
     "hook": "That QR code sticker next to the payment terminal is suspicious.",
     "script": "Fake payment sites collect card numbers and personal data. Criminals place counterfeit QR stickers over legitimate ones in stores.",
     "key_phrases": [
@@ -181,7 +181,7 @@
     "category": "QRコード",
     "bgm": "bgm_warning.mp3",
     "illustration": "no012.png",
-    "schedule": "2026-05-22T19:00:00+09:00",
+    "schedule": "2026-05-21T19:00:00+09:00",
     "hook": "Delivery notice flyers with QR codes can carry viruses.",
     "script": "Fake official-looking flyers download malware when the QR code is scanned. Criminals distribute them to residential mailboxes targeting the unprepared.",
     "key_phrases": [
@@ -197,7 +197,7 @@
     "category": "QRコード",
     "bgm": "bgm_warning.mp3",
     "illustration": "no013.png",
-    "schedule": "2026-05-23T19:00:00+09:00",
+    "schedule": "2026-05-22T19:00:00+09:00",
     "hook": "Event handout QR codes can steal your account in seconds.",
     "script": "Fake survey links hidden in event materials attempt to capture your LINE or social media login. One tap hands over your account.",
     "key_phrases": [
@@ -213,7 +213,7 @@
     "category": "QRコード",
     "bgm": "bgm_warning.mp3",
     "illustration": "no014.png",
-    "schedule": "2026-05-24T19:00:00+09:00",
+    "schedule": "2026-05-23T19:00:00+09:00",
     "hook": "Paper flyers are not safe anymore. QR codes are a dark lottery.",
     "script": "Shortened URLs in QR codes hide the real destination. You have no idea where you are going until it is too late.",
     "key_phrases": [
@@ -229,7 +229,7 @@
     "category": "デジタル全般",
     "bgm": "bgm_calm.mp3",
     "illustration": "no015.png",
-    "schedule": "2026-05-25T19:00:00+09:00",
+    "schedule": "2026-05-24T19:00:00+09:00",
     "hook": "Thieves do not need your front door. They use your phone.",
     "script": "Location data and QR codes are the two most powerful tools for modern stalkers and scammers. Convenience always carries hidden risk.",
     "key_phrases": [
@@ -245,7 +245,7 @@
     "category": "デジタル全般",
     "bgm": "bgm_calm.mp3",
     "illustration": "no016.png",
-    "schedule": "2026-05-26T19:00:00+09:00",
+    "schedule": "2026-05-25T19:00:00+09:00",
     "hook": "Default phone settings are a gift to hackers. Change them now.",
     "script": "Most smartphones record GPS data in every photo by default. You are broadcasting your location without knowing it.",
     "key_phrases": [
@@ -261,7 +261,7 @@
     "category": "デジタル全般",
     "bgm": "bgm_calm.mp3",
     "illustration": "no017.png",
-    "schedule": "2026-05-27T19:00:00+09:00",
+    "schedule": "2026-05-26T19:00:00+09:00",
     "hook": "Are your kids or elderly parents tapping QR codes freely?",
     "script": "Less cautious users are prime targets for QR code fraud. Scam volume targeting seniors and young people is rising sharply.",
     "key_phrases": [
@@ -277,7 +277,7 @@
     "category": "デジタル全般",
     "bgm": "bgm_calm.mp3",
     "illustration": "no018.png",
-    "schedule": "2026-05-28T19:00:00+09:00",
+    "schedule": "2026-05-27T19:00:00+09:00",
     "hook": "One tap. One second. That is all it takes to get infected.",
     "script": "A single click can complete a virus infection or data breach. Not opening links immediately prevents 90 percent of damage.",
     "key_phrases": [
@@ -293,7 +293,7 @@
     "category": "スマホ・2026年",
     "bgm": "bgm_tech.mp3",
     "illustration": "no019.png",
-    "schedule": "2026-05-29T19:00:00+09:00",
+    "schedule": "2026-05-28T19:00:00+09:00",
     "hook": "The floating coupon in your AR glasses might be a trap.",
     "script": "Fake QR codes and links are now being injected into augmented reality spaces to redirect users to malicious sites. Visual phishing has arrived.",
     "key_phrases": [
@@ -309,7 +309,7 @@
     "category": "スマホ・2026年",
     "bgm": "bgm_tech.mp3",
     "illustration": "no020.png",
-    "schedule": "2026-05-30T19:00:00+09:00",
+    "schedule": "2026-05-29T19:00:00+09:00",
     "hook": "Your phone itself is now a tracking device for criminals.",
     "script": "UWB ultra-wideband technology enables precise tracking of your phone from a passing stranger. Sophisticated stalking tools no longer need physical contact.",
     "key_phrases": [
@@ -325,7 +325,7 @@
     "category": "社会・2026年",
     "bgm": "bgm_tech.mp3",
     "illustration": "no021.png",
-    "schedule": "2026-05-31T19:00:00+09:00",
+    "schedule": "2026-05-30T19:00:00+09:00",
     "hook": "World Cup ticket lottery winner? Verify before clicking anything.",
     "script": "Major events flood the internet with fake official sites and fraudulent QR entry codes. Excitement overrides caution and criminals know it.",
     "key_phrases": [
@@ -341,7 +341,7 @@
     "category": "社会・2026年",
     "bgm": "bgm_tech.mp3",
     "illustration": "no022.png",
-    "schedule": "2026-06-01T19:00:00+09:00",
+    "schedule": "2026-05-31T19:00:00+09:00",
     "hook": "A deceased celebrity messaging you online is not a miracle.",
     "script": "AI recreates the personality of deceased people from historical data to deceive grieving family members and fans into sending money.",
     "key_phrases": [
@@ -357,7 +357,7 @@
     "category": "政府・大学レポ",
     "bgm": "bgm_calm.mp3",
     "illustration": "no023.png",
-    "schedule": "2026-06-02T19:00:00+09:00",
+    "schedule": "2026-06-01T19:00:00+09:00",
     "hook": "Consulting AI about work problems is a data leak waiting to happen.",
     "script": "Prompt injection attacks trick AI into revealing data. Information you enter may become training data accessible to future users.",
     "key_phrases": [
@@ -373,7 +373,7 @@
     "category": "政府・大学レポ",
     "bgm": "bgm_calm.mp3",
     "illustration": "no024.png",
-    "schedule": "2026-06-03T19:00:00+09:00",
+    "schedule": "2026-06-02T19:00:00+09:00",
     "hook": "Username and password are no longer enough to stay secure.",
     "script": "Criminals steal the session token issued after login to bypass two-factor authentication entirely. Reported by CISA and NIST as a critical threat.",
     "key_phrases": [
@@ -389,7 +389,7 @@
     "category": "政府・大学レポ",
     "bgm": "bgm_calm.mp3",
     "illustration": "no025.png",
-    "schedule": "2026-06-04T19:00:00+09:00",
+    "schedule": "2026-06-03T19:00:00+09:00",
     "hook": "AI that acts autonomously is being weaponized against you.",
     "script": "Autonomous AI agents monitor social media and send perfectly timed fake instructions to victims. The White House named this a national-level threat in 2026.",
     "key_phrases": [
@@ -405,7 +405,7 @@
     "category": "政府・大学レポ",
     "bgm": "bgm_calm.mp3",
     "illustration": "no026.png",
-    "schedule": "2026-06-05T19:00:00+09:00",
+    "schedule": "2026-06-04T19:00:00+09:00",
     "hook": "Data stolen today will be decrypted in the future by quantum computers.",
     "script": "The Harvest Now Decrypt Later strategy sees criminals storing encrypted data today for future quantum decryption. Your secrets may already be collected.",
     "key_phrases": [
@@ -421,7 +421,7 @@
     "category": "政府・大学レポ",
     "bgm": "bgm_calm.mp3",
     "illustration": "no027.png",
-    "schedule": "2026-06-06T19:00:00+09:00",
+    "schedule": "2026-06-05T19:00:00+09:00",
     "hook": "That online friend you have known for months might be an AI.",
     "script": "AI automates romance scams by building trust over months before requesting investment or money transfers. Stanford and CISA flagged this as severe.",
     "key_phrases": [
@@ -437,7 +437,7 @@
     "category": "政府・大学レポ",
     "bgm": "bgm_calm.mp3",
     "illustration": "no028.png",
-    "schedule": "2026-06-07T19:00:00+09:00",
+    "schedule": "2026-06-06T19:00:00+09:00",
     "hook": "Face ID and fingerprint are not as safe as you think.",
     "script": "AI generates synthetic biometric data from fragments that can pass authentication systems. NIST and DHS documented this as an active emerging threat.",
     "key_phrases": [
@@ -453,7 +453,7 @@
     "category": "政府・大学レポ",
     "bgm": "bgm_calm.mp3",
     "illustration": "no029.png",
-    "schedule": "2026-06-08T19:00:00+09:00",
+    "schedule": "2026-06-07T19:00:00+09:00",
     "hook": "Hackers could lock your smart home and demand ransom.",
     "script": "IoT attacks now cause physical harm. Air conditioners door locks and alarms can be weaponized. Guidelines from Japan METI and IPA warn this is real.",
     "key_phrases": [
@@ -469,7 +469,7 @@
     "category": "政府・大学レポ",
     "bgm": "bgm_calm.mp3",
     "illustration": "no030.png",
-    "schedule": "2026-06-09T19:00:00+09:00",
+    "schedule": "2026-06-08T19:00:00+09:00",
     "hook": "That app you disconnected is probably still reading your data.",
     "script": "Poorly managed API connections between apps continue harvesting location and personal data long after you think you removed access.",
     "key_phrases": [
@@ -485,7 +485,7 @@
     "category": "写真・位置情報",
     "bgm": "bgm_warning.mp3",
     "illustration": "no031.png",
-    "schedule": "2026-06-10T19:00:00+09:00",
+    "schedule": "2026-06-09T19:00:00+09:00",
     "hook": "Work desk photos on social media can expose your office location.",
     "script": "Location metadata in workplace photos can reveal confidential project sites and office addresses. Document security extends to digital photos.",
     "key_phrases": [
@@ -501,7 +501,7 @@
     "category": "QRコード",
     "bgm": "bgm_warning.mp3",
     "illustration": "no032.png",
-    "schedule": "2026-06-11T19:00:00+09:00",
+    "schedule": "2026-06-10T19:00:00+09:00",
     "hook": "That campaign QR code on a street poster might be fake.",
     "script": "Criminals place fraudulent QR stickers directly over legitimate posters. You cannot tell by looking. You need to feel for the sticker layer.",
     "key_phrases": [
@@ -517,7 +517,7 @@
     "category": "デジタル全般",
     "bgm": "bgm_calm.mp3",
     "illustration": "no033.png",
-    "schedule": "2026-06-12T19:00:00+09:00",
+    "schedule": "2026-06-11T19:00:00+09:00",
     "hook": "Your personal data is worth tens of thousands of dollars to criminals.",
     "script": "Leaked location data and personal information is packaged and sold on dark web marketplaces. Once leaked it cannot be recovered.",
     "key_phrases": [
@@ -533,7 +533,7 @@
     "category": "AI・2026年",
     "bgm": "bgm_tech.mp3",
     "illustration": "no034.png",
-    "schedule": "2026-06-13T19:00:00+09:00",
+    "schedule": "2026-06-12T19:00:00+09:00",
     "hook": "The face on your video call might not be real.",
     "script": "Real-time deepfake technology lets anyone wear any face during a video call. Fake executives are ordering wire transfers worldwide right now.",
     "key_phrases": [
@@ -549,7 +549,7 @@
     "category": "AI・2026年",
     "bgm": "bgm_tech.mp3",
     "illustration": "no035.png",
-    "schedule": "2026-06-14T19:00:00+09:00",
+    "schedule": "2026-06-13T19:00:00+09:00",
     "hook": "Sharing work secrets with AI chatbots is a serious security breach.",
     "script": "Content entered into AI tools may become training data that surfaces in other users responses. Confidential information can leak through AI outputs.",
     "key_phrases": [
