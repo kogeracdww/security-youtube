@@ -33,7 +33,7 @@ def build_metadata(no: str, hook: str, script: str, category: str) -> dict:
     emoji = emoji_map.get(category, "🔐")
 
     description = (
-        f"{emoji} No.{no} — Digital Security\n\n"
+        f"{emoji} Digital Security\n\n"
         f"⚠️ {hook}\n\n"
         f"{script}\n\n"
         "━━━━━━━━━━━━━━━━━━━━\n"
@@ -51,7 +51,7 @@ def build_metadata(no: str, hook: str, script: str, category: str) -> dict:
     )
     return {
         "snippet": {
-            "title": f"No.{no} — {hook[:60]} 🔒 #shorts",
+            "title": f"{hook[:70]} 🔒 #shorts",
             "description": description,
             "tags": ["cybersecurity","digital security","privacy","scam","phishing",
                      "QR code","GPS","AI security","shorts"],
