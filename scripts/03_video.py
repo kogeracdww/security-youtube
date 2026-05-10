@@ -9,7 +9,9 @@ from PIL import Image, ImageDraw, ImageFont
 W, H = 1080, 1920
 SAFE_TOP = 285
 FONT_PATH = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
-FS_HOOK, FS_PHRASE, FS_TITLE, FS_LOGO = 52, 46, 58, 34
+FS_HOOK, FS_PHRASE, FS_TITLE, FS_LOGO = 96, 48, 58, 34
+CAMERA_SAFE = 120   # カメラホール下端の余白
+PAD_X = 80          # 左右余白px（フック用）
 WHITE = (255, 255, 255, 255)
 WHITE_DIM = (255, 255, 255, 180)
 SHADOW = (0, 0, 0, 160)
@@ -75,11 +77,14 @@ def make_frame(bg_img, texts):
         try: font = ImageFont.truetype(FONT_PATH, fs)
         except: font = ImageFont.load_default()
         color = WHITE_DIM if dim else WHITE
-        draw_centered(draw, text, y, font, color=color)
+        # フックは左右余白PAD_Xを確保
+        max_w = W - PAD_X * 2 if fs >= FS_HOOK else W - 120
+        draw_centered(draw, text, y, font, color=color, max_w=max_w)
     return frame.convert("RGB")
 
 
 def render_frames(bg_path, hook, phrases, no, dur=20.0):
+    import re
     bg = None
     if bg_path and os.path.exists(bg_path):
         img = Image.open(bg_path).convert("RGBA")
@@ -88,22 +93,31 @@ def render_frames(bg_path, hook, phrases, no, dur=20.0):
         img = img.resize((nw,nh), Image.LANCZOS)
         bg = img.crop(((nw-W)//2, (nh-H)//2, (nw-W)//2+W, (nh-H)//2+H))
 
-    hook_y  = SAFE_TOP + 100
-    phrase_y = SAFE_TOP + 280
-    title_y = SAFE_TOP + 180
-    logo_y  = SAFE_TOP + 270
+    # レイアウト（カメラホール考慮）
+    # カメラホール下端 + フォントサイズ以上の余白
+    hook_y   = CAMERA_SAFE + FS_HOOK      # 約216px〜
+    # key_phrasesはフックの下（フックが複数行になることを考慮して余裕を持たせる）
+    phrase_y = hook_y + FS_HOOK * 4       # フックの下4行分
+    # タイトル（15-19s用）
+    title_y  = CAMERA_SAFE + FS_TITLE
+    logo_y   = title_y + FS_TITLE + 20
 
     def get_texts(t):
-        if t < 3:   return [(hook, hook_y, FS_HOOK, False)]
-        elif t < 15:
-            i = (int(t)-3)//3
-            return [(phrases[i], phrase_y, FS_PHRASE, False)] if i < len(phrases) else []
+        if t < 15:
+            # 最初から全部表示（フック + key_phrases[0-2]）
+            texts = [(hook, hook_y, FS_HOOK, False)]
+            for i, p in enumerate(phrases[:3]):
+                texts.append((p, phrase_y + i * int(FS_PHRASE * 1.6), FS_PHRASE, False))
+            return texts
         elif t < 19:
-            p4 = phrases[3] if len(phrases)>3 else ""
-            import re; p4 = re.sub(r"^No\.\d+\s*[\-—–]\s*", "", p4)
+            # タイトルカード
+            p4 = phrases[3] if len(phrases) > 3 else ""
+            p4 = re.sub(r"^No\.\d+\s*[\-—–]\s*", "", p4)
             return [(p4, title_y, FS_TITLE, False),
-                              ("Digital Security", logo_y, FS_LOGO, True)]
-        else: return [(hook, hook_y, FS_HOOK, False)]
+                    ("Digital Security", logo_y, FS_LOGO, True)]
+        else:
+            # ループ：フックのみ
+            return [(hook, hook_y, FS_HOOK, False)]
 
     tmpdir = tempfile.mkdtemp()
     fps, total = 30, int(dur*30)
